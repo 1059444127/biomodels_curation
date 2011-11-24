@@ -11,7 +11,7 @@
 # VALIDATE: http://sbml.org/Community/Programs/validateSBML.py
 #   Printing of warnings was removed
 #
-BASEDIR := /home/mschu/GitHub/biomodels_curation
+BASEDIR := /home/mschu/Dokumente/EBI/biomodels_curation
 COPASI := /usr/bin/CopasiSE
 PYTHON := /usr/bin/python2.7
 TIDY := /usr/bin/tidy

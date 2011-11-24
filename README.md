@@ -17,6 +17,20 @@ be more complete and up-to-date than the ones provided here. If plan on using
 the models instead of the curation framework, please use them from the database
 directly.
 
+Usage
+-----
+
+The sample models are provided either as Copasi or unannotated SBML files.
+Using the Make framework, they are transformed into annotated SBML files and
+those are plotted using specific plotting scripts. To run, type:
+
+    ./configure
+    make
+
+Upon which all model files and figures are created. Note that you can run
+`make` in only one subdirectory as well, `configure` needs to be called before,
+however.
+
 Requirements
 ------------
 
@@ -64,20 +78,6 @@ sample files for the framework here:
    Therapeutics, 86(3):290–298, 2009.
  * C. J. Lee, S. Wu, C. Eun, and L. G. Pedersen. A revisit to the one form 
    kinetic model of prothrombinase. Biophysical chemistry, 149(1-2):28–33, 2010.
-
-Usage
------
-
-The sample models are provided either as Copasi or unannotated SBML files.
-Using the Make framework, they are transformed into annotated SBML files and
-those are plotted using specific plotting scripts. To run, type:
-
-    ./configure
-    make
-
-Upon which all model files and figures are created. Note that you can run
-`make` in only one subdirectory as well, `configure` needs to be called before,
-however.
 
 [sbml]: http://sbml.org/Basic_Introduction_to_SBML
 [uniprot]: http://www.uniprot.org/
