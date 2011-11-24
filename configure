@@ -1,0 +1,53 @@
+#!/bin/sh
+#
+# configure script for the BioModels curation Makefile
+#
+# This script sets the paths and executables required to successfully run
+# the Makefile or fails otherwise. Run it before calling make.
+#
+
+cd `dirname $0`
+DIRNAME=`pwd`
+sed -i "s|BASEDIR := .*|BASEDIR := ${DIRNAME}|" Makefile
+echo "Using basedir: $DIRNAME"
+
+PYTHON=${PYTHON-`which python2.7 || which python2 || which python`}
+if [ -f $PYTHON ] && [ -x $PYTHON ]; then
+    sed -i "s|PYTHON := .*|PYTHON := ${PYTHON}|" Makefile
+    echo "Using python: $PYTHON"
+else
+    echo "ERROR: no python installation found; set PYTHON manually"
+    exit 1
+fi
+
+COPASI=${COPASI-`which CopasiSE`}
+if [ -f $COPASI ] && [ -x $COPASI ]; then
+    sed -i "s|COPASI := .*|COPASI := ${COPASI}|" Makefile
+    echo "Using copasi: $COPASI"
+else
+    echo "ERROR: no copasi installation found; set COPASI manually"
+    exit 1
+fi
+
+TIDY=${TIDY-`which tidy`}
+if [ -f $TIDY ] && [ -x $TIDY ]; then
+    sed -i "s|TIDY := .*|TIDY := ${TIDY}|" Makefile
+    echo "Using tidy: $TIDY"
+else
+    echo "ERROR: no tidy installation found; set TIDY manually"
+    exit 1
+fi
+
+if [ -z MAMM.map ]; then
+    echo "Updating kinetic laws to MAMM.map ..."
+    $PYTHON expressionMapper.py -initialise MAMM.map > /dev/null
+    echo "done"
+fi
+
+for MODULE in numpy libsbml sympy suds matplotlib COPASI; do
+    echo "Checking for python module: $MODULE"
+    if ! `$PYTHON -c "import $MODULE" 2>/dev/null`; then
+        echo "ERROR: did not find module $MODULE"
+        exit 1
+    fi
+done

@@ -1,0 +1,58 @@
+Fg	hasPart	urn:miriam:uniprot:P02671 # alpha chain
+Fg	hasPart	urn:miriam:uniprot:P02679 # beta chain
+Fg	hasPart	urn:miriam:uniprot:P02675 # gamma chain
+I	is	Fg
+Fbn	is	Fg
+XF	isVersionOf	Fg # cross-linked fibrin
+F 	isVersionOf	Fg # fibrin monomer
+II	is	urn:miriam:uniprot:P00734
+mIIa	isVersionOf	II
+III	is	urn:miriam:uniprot:P13726
+TF	is	III
+V	is	urn:miriam:uniprot:P12259
+VI	isVersionOf	V
+VII	is	urn:miriam:uniprot:P08709
+VIII	is	urn:miriam:uniprot:P00451
+IX	is	urn:miriam:uniprot:P00740
+X	is	urn:miriam:uniprot:P00742
+XI	is	urn:miriam:uniprot:P03951
+XII	is	urn:miriam:uniprot:P00748
+XIII	hasPart	urn:miriam:uniprot:P00488 # a chain
+XIII	hasPart	urn:miriam:uniprot:P05160 # b chain
+TFPI	is	urn:miriam:uniprot:P10646
+ATIII	is	urn:miriam:uniprot:P01008
+AT	is	ATIII
+vWF	is	urn:miriam:uniprot:P04275
+alpha1AT	is	urn:miriam:uniprot:P01009
+alpha2M	is	urn:miriam:uniprot:P01023
+alpha2AP	is	urn:miriam:uniprot:P08697
+Tmod	is	urn:miriam:uniprot:P07204	
+Tm	is	Tmod
+TM	is	Tmod
+PK	is	urn:miriam:uniprot:P03952
+Pk	is	PK
+K	isVersionOf	PK
+Pg	is	urn:miriam:uniprot:P00747
+#P	isVersionOf	Pg
+PC	is	urn:miriam:uniprot:P04070
+APC	isVersionOf	PC
+PS	is	urn:miriam:uniprot:P07225
+PZ	is	urn:miriam:uniprot:P22891
+VK	is	urn:miriam:obo.chebi:CHEBI%3A28384 # vitK
+VK_p	is	VK
+VKH2 	isVersionOf	VK # vitK-H2
+VKO 	isVersionOf	VK # vitK-O
+TAT	hasPart	II # thrombin-ATIII complex
+TAT	hasPart ATIII
+Heparin	is	urn:miriam:obo.chebi:CHEBI%3A28304
+Hep	is	Heparin
+Warfarin	is	urn:miriam:obo.chebi:CHEBI%3A10033
+C_warf	is	Warfarin
+A_warf	is	Warfarin
+#DP
+#CA
+FDP	isVersionOf	Fg
+#D
+VIIIa1_L	isPartOf	VIII
+VIIIa2	isPartOf	VIII
+Va[0-9]{0,3}    isPartOf V

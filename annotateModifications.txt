@@ -1,0 +1,21 @@
+# This file is mainly used to annotate reactions and their products. However,
+# it can also be used to describe modifications to names without reactions.
+# In this case, 
+#
+# Reactant	: regex to match the reactant
+# Product	: substitution pattern to match the product
+# MIRIAM-URN_R	: describing the reaction (e.g. proteolytic cleavage)
+# sboTerm_R	: describing the reaction
+# reaction_type	: identity - product will get the same annotation as reactant
+#		  modification - product will get modified qualifier
+#		  addition;<urn> - product will get hasPart of new and old urns
+#		  transport;<urn> - sets occursIn(?)
+
+# Reactant	Product	reaction_type	qualifier	MIRIAM-URN_Reaction	sboTerm_Reaction
+^([VIX]+)$	\1a	modification	is	urn:miriam:GO:0002543	SBO:0000178
+^([VIX]+a?)$	\1i	modification	is	inactivation____	SBO:0000179
+
+# here go the identity transforms
+^(\w+)_l$	\1	identity	none	none	none
+^(\w+)_f$	\1	identity	none	none	none
+#^(\w+)[0-9]{1,3}$	\1	identity	none	none	none
