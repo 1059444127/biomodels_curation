@@ -9,13 +9,14 @@ could be linked to physical ones. Additionally, one or more figures from the
 original article were reproduced in order to validate the model and its
 simulation results.
 
-The work and especially the models themselves are copyright (c) [EMBL][embl],
-2011.
-
 Note that the models deposited in the [BioModels database][bmdb] will always 
 be more complete and up-to-date than the ones provided here. If plan on using 
 the models instead of the curation framework, please use them from the database
 directly.
+
+All models published in the BioModels database are released without copyright
+under a [CC0][cc0] license. The Framework is (c) [EMBL][embl], 2011 but may
+be used under the terms of the [GPL][gpl] version 2 or later.
 
 Usage
 -----
@@ -43,7 +44,7 @@ with the sample models provided:
                   libraries required are [NumPy][numpy] (for numerical data 
                   structures), [matplotlib][matplotlib] (for plotting), 
                   [libSBML][libsbml] (for manipulation of SBML files), 
-                  [SymPY][sympy] (for matching of kinetic laws to 
+                  [SymPy][sympy] (for matching of kinetic laws to 
                   [SBO terms][sbo]) and [SUDS][suds] (for interacting with the 
                   SBO webservice via [SOAP][soap]).
  * [Coapsi][copasi]
@@ -83,6 +84,8 @@ sample files for the framework here:
 [uniprot]: http://www.uniprot.org/
 [embl]: http://www.embl.de/
 [bmdb]: http://www.ebi.ac.uk/biomodels-main/
+[gpl]: http://www.gnu.org/licenses/gpl.html
+[cc0]: http://creativecommons.org/publicdomain/zero/1.0/
 [python]: http://python.org/
 [copasi]: http://www.copasi.org/tiki-view_articles.php
 [tidy]: http://tidy.sourceforge.net/
